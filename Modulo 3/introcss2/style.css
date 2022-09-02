@@ -1,0 +1,24 @@
+/* seletor universal */
+* {
+    background-color: brown;
+}
+/* seletor por TAG */
+body {
+    background-color: brown;
+}
+/* seletor por class */
+.corrente {
+    background-color: chartreuse;
+}
+/* seletor por id */
+#texto {
+    background-color: coral;
+}
+
+ul li {
+    background-color: deeppink;
+}
+.corrente:hover {
+    background-color: white;
+}
+

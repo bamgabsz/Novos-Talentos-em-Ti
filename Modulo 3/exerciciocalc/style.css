@@ -1,0 +1,14 @@
+body {
+    max-width: 970px;
+    margin: auto;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+       'tela tela tela tela';
+    grid-gap: 30px;
+    margin: 30px;
+}
+.tela{
+    grid-area: tela;
+}

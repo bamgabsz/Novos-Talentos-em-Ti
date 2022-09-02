@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>PHP Test</title>
+  </head>
+  <body>
+    <form action="processa.php" method="POST">
+        <fieldset>
+            <legend>Nome completo e legível</legend>
+            <label for="txtnome">Nome: </label>
+            <input type="text" name="nome" id="txtnome" required>
+        </fieldset>
+        <fieldset>
+            <label for="txtdata">Data Nascimento</label>
+            <input type="date" name="datanascimento" id="txtdata">
+        </fieldset>
+        <fieldset>
+            <label>Texto bem grande</label>
+            <textarea 
+                cols=20
+                rows=5 placeholder="Digite um texto bonito!"
+                name="txttextogrande"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="txtemail">E-mail</label>
+            <input type="email" name="email" id="txtemail">
+        </fieldset>
+        <fieldset>
+            <label for="txtsenha">Senha</label>
+            <input type="password" name="senha" id="txtsenha">
+        </fieldset>
+        <fieldset>
+            <label for="txtnovocliente">Cliente novo</label>
+            <input type="checkbox" name="novocliente" 
+                id="txtnovocliente">
+        </fieldset>
+        <fieldset>
+            <label>Você esta certo disso?</label>
+            <label for="txtsim">SIM</label>
+            <input type="radio" name="pergunta" id="txtsim">
+            <label for="txtnao">Não</label>
+            <input type="radio" name="pergunta" id="txtnao">
+        </fieldset>
+        <fieldset>
+            <label for="txtcidade">Cidade</label>
+            <select name="cidade" id="txtcidade">
+                <option value="1">Joinville</option>
+                <option value="2">Jaraguá do Sul</option>
+                <option value="3">São Bento do Sul</option>
+                <option value="4">Campo Alegre</option>
+                <option value="5">Rio Negrinho</option>
+                <option value="6">Mafra</option>
+            </select>
+        </fieldset>
+        
+        <input type="submit">
+    </form>
+  </body>
+</html>

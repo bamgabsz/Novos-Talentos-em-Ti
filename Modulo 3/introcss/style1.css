@@ -1,0 +1,34 @@
+body {
+    background-color:cornflowerblue;
+}
+
+h2, p, em {
+    font-size: 15px;
+}
+p {
+    /*font-family: "Verdana";*/
+    /*font-family: 'Verdana';*/
+    font-family: Verdana;
+}
+
+h2 {
+    border: 1px SOLID RED;
+    border-radius: 5px;
+    /*border-width: 10px;*/
+    /*border-width: 10px 5px 2px 1px;*/
+    /*border-width: 10px 5px;*/
+    border-width: 10px 5px 1px;
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-color: #fff;
+    border-right-color: pink;
+    border-bottom-color: springgreen;
+    border-left-color: blueviolet;
+    border-top-style: dotted;
+    border-bottom-style: groove;
+    padding: 20px;
+    margin: 30px;
+
+}

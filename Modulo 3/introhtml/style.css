@@ -1,0 +1,14 @@
+/*RGB - RED - GREEN - BLUE*/
+
+html{
+    background-color: rgb(179, 194, 183);
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: sans-serif;
+    border: 1px solid;
+    text-align: center;
+}
+
+

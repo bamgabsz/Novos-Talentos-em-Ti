@@ -1,0 +1,44 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    max-width: 960px;
+    margin: auto;
+}
+.container {
+    border: solid 3px red;
+    /*height: 100vw;*/
+    display: grid;
+    grid-template: 
+        'topo topo'
+        'imagem imagem'
+        'texto video'
+        'rodape rodape';
+    grid-gap: 20px;
+    padding: 20px;
+}
+.topo {
+    border: solid 3px orangered;
+    grid-area: topo;
+}
+.imagem {
+    border: solid 3px green;
+    /*height: 200px; será removido no futuro*/
+    grid-area: imagem;
+}
+.texto {
+    border: solid 3px blue;
+    /*height: 200px; será removido no futuro*/
+    grid-area: texto;
+}
+.video {
+    border: solid 3px purple;
+    /*height: 200px; será removido no futuro*/
+    grid-area: video;
+}
+.rodape {
+    border: solid 3px black;
+    grid-area: rodape;
+}
+img {
+    width: 100%;
+}

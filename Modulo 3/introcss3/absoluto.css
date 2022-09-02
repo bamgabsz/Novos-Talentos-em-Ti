@@ -1,0 +1,18 @@
+div {
+    width: 360px;
+    padding: 10px 20px;
+    border: 2px solid black;
+  }
+  p{ 
+    border: 2px dotted black;
+    padding: 10px 20px;
+  }
+  .tres {
+    background: #ddd;
+    /*position: absolute;*/
+    position: fixed;
+    left: 90px;
+    top: 125px;
+
+  }
+  

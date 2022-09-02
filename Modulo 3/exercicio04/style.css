@@ -1,0 +1,66 @@
+body {
+    /*background-color: blueviolet;*/
+    /*Site GRADIENTE https://cssgradient.io/*/
+    /*background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 24%, rgba(0,212,255,1) 100%);*/
+    /*background-image: url('./img/tijolo.jpg');*/
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'titulo busca'
+    'menu produto';
+}
+.titulo {
+    grid-area: titulo;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*background-color: cadetblue;*/
+    border: solid 3px black;
+    /*height: 100px;*/
+}
+.busca {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: busca;
+    /*background-color: aqua;*/
+    border: solid 3px black;
+    /*height: 100px;*/
+}
+.menu {
+    grid-area: menu;
+    /*background-color: black;*/
+    border: solid 3px black;
+    /*height: 100px;*/
+}
+.produto {
+    grid-area: produto;
+    /*background-color:chartreuse;*/
+    border: solid 3px black;
+    /*height: 100px;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.umproduto{
+    /*height: 80px;*/
+    border: solid 3px chartreuse;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img {
+    width: 90%;
+}
+li {
+    margin: 20px 0px 20px;
+}
+ul {
+    list-style: none;
+}

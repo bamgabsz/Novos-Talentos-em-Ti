@@ -1,0 +1,53 @@
+.box {
+    height: 100px;
+    border: solid 3px black;
+}
+ul {
+    list-style-type: none;
+}
+ul li {
+    float:left;
+    margin: 0px 20px 0px;
+}
+#fotohomer{
+    width: 140px;
+}
+.topo {
+    grid-area: topo;
+    display: flex;
+    align-items: center;
+}
+.centro {
+    grid-area: centro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+#boxinfo{
+    border: solid 3px black;
+    padding: 5px 30px 5px;
+}
+/*#boxinfo > h2{
+    margin: 10px 30px 10px;
+}*/
+.esquerda {
+    grid-area: esquerda;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.direita {
+    grid-area: direita;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    display: grid;
+    /*grid-template-columns: 1fr 2fr;*/
+    grid-template-areas: 
+        'topo topo topo'
+        'centro centro centro'
+        'esquerda direita direita';
+}

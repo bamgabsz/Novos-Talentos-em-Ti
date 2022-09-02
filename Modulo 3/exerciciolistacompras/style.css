@@ -1,0 +1,25 @@
+body {
+    max-width: 970px;
+    margin: auto;
+    font-size: 18px;
+}
+.titulo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 2px 5px greenyellow;
+    letter-spacing: 10px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}

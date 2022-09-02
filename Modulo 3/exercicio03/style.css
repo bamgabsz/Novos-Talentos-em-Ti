@@ -1,0 +1,53 @@
+.topo {
+    grid-area: topo;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem;
+}
+.foto {
+    grid-area: foto;
+}
+.texto1 {
+    grid-area: texto1;
+    text-align: justify;
+}
+.texto2 {
+    grid-area: texto2;
+    text-align: justify;
+}
+.texto3 {
+    grid-area: texto3;
+    text-align: justify;
+}
+.texto4 {
+    grid-area: texto4;
+    text-align: justify;
+}
+.texto5 {
+    grid-area: texto5;
+    text-align: justify;
+}
+.rodape {
+    grid-area: rodape;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+.container {
+    display: grid;
+    grid-template-columns: 2fr 3fr 5fr;
+    grid-template-areas: 
+        'topo topo topo'
+        'foto texto1 texto5'
+        'foto texto2 texto5'
+        '.    texto3 texto5'
+        '.    texto4 texto5'
+        'rodape rodape rodape';
+    grid-gap: 3rem;
+    max-width: 970px;
+    margin: auto;
+}

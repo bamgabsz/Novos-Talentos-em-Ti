@@ -1,0 +1,30 @@
+nav {
+    background-color: gainsboro;
+    border-radius: 5px;
+    padding: 10px;
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    display: inline;
+    padding: 10px;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+a:hover {
+    color: green;
+}
+
+.fundoverde {
+    background-color: green;
+}
+.fundoazul {
+    background-color: blue;
+}
