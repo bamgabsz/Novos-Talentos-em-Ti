@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const { engine } = require('express-handlebars');
 const path = require('path');
+const bodyparser = require('body-parser');
 
+app.use(bodyparser.urlencoded({ extended:false }));
 app.set('view engine', 'handlebars');
 app.engine('handlebars', engine());
 
@@ -37,6 +39,35 @@ app.get("/", function(req,res){
 
 app.get("/clientes", function(req,res){
     res.render('cliente/cliente',{listaclientes: fakeData});
+});
+
+app.get("/clientes/novo", function(req,res){
+    res.render("cliente/formcliente");
+});
+
+app.post("/clientes/save", function(req,res){
+    //console.log(req.body.nome);
+    // Criando um novo objeto JS com o atributo nome
+    //Math.max()
+
+    let maiorid = Math.max(...fakeData.map( o => o.id ));
+    if (maiorid == -Infinity) maiorid = 0;
+    /*
+        const fakedata = [ {id: 1, nome: 'ze'}, {id: 2, nome: 'lu'}];
+        fakeData.map( o => o.id ) Transforma em
+        const outralista = [ {id: 1}, {id: 2}];
+        ...fakeData.map( o => o.id ) Transforma em
+        const listanumeros = [1,2];
+    */
+    let novoCliente = {
+        id: maiorid + 1,
+        nome: req.body.nome,
+        endereco: req.body.endereco,
+        sexo: req.body.sexo,
+        telefone: req.body.telefone
+    };
+    fakeData.push(novoCliente);
+    res.redirect("/clientes");
 });
 
 app.listen(3000, () =>{ //CALLBACK
