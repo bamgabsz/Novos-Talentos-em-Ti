@@ -1,28 +1,36 @@
-<h3>Novo Cliente</h3>
+<h3>Cliente</h3>
 <hr>
 <form action="/clientes/save" method="POST">
+
+    <input type="hidden" name="id" 
+    value="{{cliente.id}}">
+
     <div class="form-group">
         <label for="txtnome">Nome:</label>
         <input type="text" name="nome"
-            id="txtnome"
-            class="form-control">
+            id="txtnome" value="{{cliente.nome}}"
+            class="form-control" required>
+            <!-- Binding -->
     </div>
     <!--colocar os demais campos do cliente-->
     <div class="form-group">
         <label for="txtendereco">Endereço:</label>
         <input type="text" id="txtendereco" 
+        value="{{cliente.endereco}}"
         class="form-control" name="endereco">
     </div>
 
     <div class="form-group">
         <label for="txtsexo">Sexo:</label>
         <input type="text" id="txtsexo" 
+        value="{{cliente.sexo}}"
         class="form-control" name="sexo">
     </div>
 
     <div class="form-group">
         <label for="txttelefone">Telefone:</label>
         <input type="text" id="txttelefone" 
+        value="{{cliente.telefone}}"
         class="form-control" name="telefone">
     </div>
     <br>
