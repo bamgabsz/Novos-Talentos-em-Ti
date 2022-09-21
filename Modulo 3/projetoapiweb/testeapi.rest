@@ -26,3 +26,6 @@ content-type: application/json
     "sexo": "Masculino",
     "telefone": "5555-6666"
 }
+
+###
+DELETE http://localhost:3000/api/v1/clientes/1

@@ -65,3 +65,12 @@ DICA: Veja a função includes do Javascript
 - Resposta: o objeto alterado
 - Header Resposta
     - Content-Type = application/json (tipo do informação retornada pela API)
+
+### Endpoint DELETE /api/v1/clientes/{id}
+- Verbo DELETE do protocolo HTTP
+- Objetivo: receber o id pela URL e remover o objeto do sistema
+- HTTP Status Code 200 - Sucesso
+- HTTP Status Code 404 - Not found
+- Resposta: o objeto excluido
+- Header Resposta
+    - Content-Type = application/json (tipo do informação retornada pela API)

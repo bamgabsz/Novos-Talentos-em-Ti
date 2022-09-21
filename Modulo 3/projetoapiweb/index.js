@@ -74,16 +74,40 @@ app.post("/api/v1/clientes", (req,res)=>{
 });
 
 app.put("/api/v1/clientes/:id", (req,res) =>{
+    let httpStatus = 200;
     let idClienteAntigo = req.params.id; //id da URL
     let clienteAtualizacao = req.body;
     let clienteAnt =
         fakeData.find(o => o.id == idClienteAntigo);
-    clienteAnt.nome = clienteAtualizacao.nome;
-    clienteAnt.endereco = clienteAtualizacao.endereco;
-    clienteAnt.sexo = clienteAtualizacao.sexo;
-    clienteAnt.telefone = clienteAtualizacao.telefone;
-    res.writeHead(200,{"Content-Type": "application/json"});
+    if(clienteAnt == undefined){
+        httpStatus = 404; //Not found
+    }else{
+        let campos = ['nome','endereco','sexo','telefone'];
+        if (!Object.keys(clienteAtualizacao).some(o => campos.includes(o))){
+            clienteAnt = {};
+            httpStatus = 400; //Bad Request
+        }else{
+            clienteAnt.nome = clienteAtualizacao.nome;
+            clienteAnt.endereco = clienteAtualizacao.endereco;
+            clienteAnt.sexo = clienteAtualizacao.sexo;
+            clienteAnt.telefone = clienteAtualizacao.telefone;
+        }
+    }
+    res.writeHead(httpStatus,{"Content-Type": "application/json"});
     res.end(JSON.stringify(clienteAnt));
+});
+
+app.delete("/api/v1/clientes/:id", (req,res)=>{
+    //Guardo da URL o ID do cliente para remover
+    let idCliente = req.params.id;
+    //Procurar pelo objeto usando o id
+    let clienteExcluir = fakeData.find(o => o.id == idCliente);
+    //Descobrir a posição do objeto dentro do array
+    let posicao = fakeData.indexOf(clienteExcluir);
+    //Mando excluir
+    fakeData.splice(posicao,1);
+    res.writeHead(200,{"Content-Type": "application/json"});
+    res.end(JSON.stringify(clienteExcluir));
 });
 
 app.listen(3000, () =>{ //CALLBACK
